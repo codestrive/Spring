@@ -4,6 +4,7 @@ public class AccountFactory {
 
 	public Account manufactureAccount(String accountType){
 		System.out.println("Account Factory Called");
+		
 		Account userAccount = null;
 		if("S".equals(accountType))
 			userAccount = new SavingsAccount("X1234");

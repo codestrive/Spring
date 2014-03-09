@@ -13,6 +13,4 @@ public class Client {
 		
 		payment.pay();
 	}
-	
-	
 }
