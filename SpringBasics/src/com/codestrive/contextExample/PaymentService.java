@@ -23,7 +23,7 @@ public class PaymentService {
 		userAccount = new AccountFactory().manufactureAccount(getAccountType());
 	}
 	
-	public void pay(){
+	public void accountNumber(){
 		System.out.println("Payment using tight coupling --> " + this.userAccount.getDetails());
 	}
 

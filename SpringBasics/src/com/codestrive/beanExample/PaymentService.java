@@ -10,10 +10,12 @@ public class PaymentService {
 	private String accountType;
 	
 	public String getAccountType() {
+		
 		return accountType;
 	}
 
 	public void setAccountType(String accountType) {
+		System.out.println("setting the value form spring");
 		this.accountType = accountType;
 	}
 
@@ -22,9 +24,9 @@ public class PaymentService {
 		
 	}
 	
-	public void pay(){
+	public void accountNumber(){
 		userAccount = new AccountFactory().manufactureAccount(getAccountType());
-		System.out.println("Payment using tight coupling --> " + this.userAccount.getDetails());
+		System.out.println("Payment using loose coupling --> " + this.userAccount.getDetails());
 	}
 
 }

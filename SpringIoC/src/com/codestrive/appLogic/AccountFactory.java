@@ -1,14 +1,9 @@
 package com.codestrive.appLogic;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
-
 
 public class AccountFactory {
-	
 	
 	public String getRate(String accountType){
 		/*
@@ -22,9 +17,9 @@ public class AccountFactory {
 		 */
 		System.out.println("Account Factory Called");
 		Account userAccount = null;
-		//ApplicationContext factory = new ClassPathXmlApplicationContext("springContextContructorBased.xml");
-		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("springBean.xml"));
-
+		ApplicationContext factory = new ClassPathXmlApplicationContext("springContextContructorBased.xml");
+		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("springBean.xml"));
+		
 		if("S".equals(accountType))
 			userAccount = (Account) factory.getBean("savingAccount");
 		if("F".equals(accountType))

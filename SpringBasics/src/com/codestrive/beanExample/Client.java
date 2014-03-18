@@ -18,7 +18,7 @@ public class Client {
 		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("springBean.xml"));
 		//ApplicationContext context = new ClassPathXmlApplicationContext("springContext.xml");
 		PaymentService payment = (PaymentService) factory.getBean("paymentService");
-		payment.pay();
+		payment.accountNumber();
 
 	}
 	

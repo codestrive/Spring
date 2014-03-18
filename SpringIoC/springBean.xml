@@ -5,9 +5,7 @@
 <beans>
 
 <!-- bean definitions here -->
-<bean id="paymentService" class="com.codestrive.beanFactoryApproach.PaymentService">
-	<property name="accountType"  value="S" />
-</bean>
+
 
 <bean id="savingAccount" class="com.codestrive.appLogic.SavingAccount">
 	<constructor-arg value="4%"></constructor-arg>

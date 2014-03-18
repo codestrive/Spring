@@ -11,6 +11,6 @@ public class Client {
 		ApplicationContext context = new ClassPathXmlApplicationContext("springContextContructorBased.xml");
 		PaymentService payment = (PaymentService) context.getBean("paymentService");
 		
-		payment.pay();
+		payment.accountNumber();
 	}
 }
