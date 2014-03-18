@@ -1,4 +1,4 @@
-package com.codestrive.aspect.before;
+package com.codestrive.aspect.after;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -18,7 +18,7 @@ public class LoggingAspect {
 	
 	@Before("execution(public String com.codestrive.appLogic.SavingAccount.getInterestRate())")
 	public void loggingAdvice(){
-		System.out.println("Before Advice Run. Get Method called ");
+		System.out.println("After Advice Run. Get Method called ");
 	}
 	
 }

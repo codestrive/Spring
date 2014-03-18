@@ -18,12 +18,12 @@ public class LoggingAspect {
 	
 	@Before("loggingAdvicePointcut()")
 	public void loggingAdvice(){
-		System.out.println("Advice Run. Get Method called ");
+		System.out.println("PointCut Advice Run. Get Method called ");
 	}
 	
-	@Pointcut("execution(public String com.codestrive.appLogic.SavingAccount.getInterestRate())")
+	@Pointcut("execution(public String getInterestRate())")
 	public void loggingAdvicePointcut(){
-		System.out.println("Advice Run. Get Method called ");
+		
 	}
 	
 }
