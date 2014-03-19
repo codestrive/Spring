@@ -1,24 +1,34 @@
 package com.codestrive.aspect.after;
 
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 
 @Aspect
 public class LoggingAspect {
 	
-	/* @Before("execution(public String com.codestrive.appLogic.SavingAccount.getInterestRate())")
-	 * @Before("execution(public String *.getInterestRate())")
-	 * @Before("execution(public String *.get*())")
-	 * @Before("execution(public String *.get*(..))")
-	 * @Before("execution(public String *.get*(*))")
-	 * @Before("execution(public * *.get*())")
-	 * @Before("execution(* * *.get*())")
-	 * @Before("args(someString)") // string integer or any type
+	/* @After
+	 * @AfterReturning
+	 * @AfterThrowing
+	 * 
 	*/
 	
-	@Before("execution(public String com.codestrive.appLogic.SavingAccount.getInterestRate())")
+	
+	@After("execution(public String getInterestRate())")
 	public void loggingAdvice(){
 		System.out.println("After Advice Run. Get Method called ");
 	}
+	
+	@AfterReturning("execution(public String getInterestRate())")
+	public void loggingReturnAdvice(){
+		System.out.println("AfterReturning Advice Run. Get Method called ");
+	}
+	
+	/*@AfterThrowing("execution(public String getInterestRate())")
+	public void loggingClassAdvice(){
+		System.out.println("AfterThrowing Advice Run. Get Method called ");
+	}*/
+	
 	
 }

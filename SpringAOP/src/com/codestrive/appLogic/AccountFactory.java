@@ -20,14 +20,18 @@ public class AccountFactory {
 		ApplicationContext factory = new ClassPathXmlApplicationContext("spring-aop-annotation.xml");
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("springBean.xml"));
 		
-		if("S".equals(accountType))
+		if("S".equals(accountType)){
 			userAccount = (Account) factory.getBean("savingAccount");
+			
+		}
 		if("F".equals(accountType))
 			userAccount = (Account) factory.getBean("fixedAccount");
 		if("P".equals(accountType))
 			userAccount = (Account) factory.getBean("ppfAccount");
 		
 		String interestrate  = userAccount.getInterestRate();
+		//SavingAccount sa = new SavingAccount("S");
+		//sa.setAccountNumber("MyAccount01");
 		return interestrate;
 	}
 }

@@ -3,6 +3,7 @@ package com.codestrive.impl;
 
 import java.util.Scanner;
 import com.codestrive.appLogic.AccountFactory;
+import com.codestrive.appLogic.SavingAccount;
 
 public class Client {
 
@@ -15,7 +16,7 @@ public class Client {
 	public static void main(String[] args) {
 		AccountFactory acoountFactory = new AccountFactory();
 		System.out.println(acoountFactory.getRate(getUserInput()));
-
+		
 	}
 	
 	private static String getUserInput(){
