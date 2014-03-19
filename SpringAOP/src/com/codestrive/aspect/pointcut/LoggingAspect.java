@@ -1,5 +1,6 @@
 package com.codestrive.aspect.pointcut;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -32,4 +33,13 @@ public class LoggingAspect {
 	
 	@Pointcut("execution(public * set*(..))")
 	public void allSetter(){}
+	
+	//@Pointcut("within(com.codestrive.aspect.appLogic.SavingAccount))")//used for class and package level
+	//public void allMethods(){}
+	
+	@Before("allGetters()")
+	public void joinPointEx(JoinPoint joinPoint ){
+		System.out.println("joinPointEx : joinPoint "+ joinPoint.toString());
+		System.out.println("joinPointEx : joinPoint "+ joinPoint.getTarget());
+	}
 }

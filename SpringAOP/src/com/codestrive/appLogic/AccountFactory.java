@@ -34,8 +34,8 @@ public class AccountFactory {
 		//userAccount.getAccountNumber();
 	//	userAccount.setBalanceAmount(999);
 	//	userAccount.getBalanceAmount();
-		userAccount.setAccountHolderName("Koushik", "Ghosh");
-		userAccount.getAccountHolderName();
+		//userAccount.setAccountHolderName("Koushik", "Ghosh");
+		//userAccount.getAccountHolderName();
 		//sa.setAccountNumber("MyAccount01");
 		return interestrate;
 	}
