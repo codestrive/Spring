@@ -15,20 +15,20 @@ public class LoggingAspect {
 	*/
 	
 	
-	@After("execution(public String getInterestRate())")
+	@After("execution(public * get*()))")
 	public void loggingAdvice(){
 		System.out.println("After Advice Run. Get Method called ");
 	}
 	
-	@AfterReturning("execution(public String getInterestRate())")
+	@AfterReturning("execution(public String getAccountHolderName())")
 	public void loggingReturnAdvice(){
 		System.out.println("AfterReturning Advice Run. Get Method called ");
 	}
 	
-	/*@AfterThrowing("execution(public String getInterestRate())")
+	@AfterThrowing("execution(public String getAccountHolderName())")
 	public void loggingClassAdvice(){
 		System.out.println("AfterThrowing Advice Run. Get Method called ");
-	}*/
+	}
 	
 	
 }

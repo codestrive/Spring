@@ -16,14 +16,20 @@ public class LoggingAspect {
 	 * @Before("args(someString)") // string integer or any type
 	*/
 	
-	@Before("loggingAdvicePointcut()")
-	public void loggingAdvice(){
-		System.out.println("PointCut Advice Run. Get Method called ");
+	@Before("allGetters() || allSetter()")
+	public void firstAdvice(){
+		System.out.println("First : Before Advice get called");
 	}
 	
-	@Pointcut("execution(public String getInterestRate())")
-	public void loggingAdvicePointcut(){
-		
+	@Before("allGetters()")
+	public void secondAdvice(){
+		//System.out.println("\n");
+		System.out.println("Second : Before Advice get called");
 	}
 	
+	@Pointcut("execution(public * get*())")
+	public void allGetters(){}
+	
+	@Pointcut("execution(public * set*(..))")
+	public void allSetter(){}
 }

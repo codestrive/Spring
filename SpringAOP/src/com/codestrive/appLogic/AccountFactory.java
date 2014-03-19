@@ -30,7 +30,12 @@ public class AccountFactory {
 			userAccount = (Account) factory.getBean("ppfAccount");
 		
 		String interestrate  = userAccount.getInterestRate();
-		//SavingAccount sa = new SavingAccount("S");
+		//userAccount.setAccountNumber("001");
+		//userAccount.getAccountNumber();
+	//	userAccount.setBalanceAmount(999);
+	//	userAccount.getBalanceAmount();
+		userAccount.setAccountHolderName("Koushik", "Ghosh");
+		userAccount.getAccountHolderName();
 		//sa.setAccountNumber("MyAccount01");
 		return interestrate;
 	}
