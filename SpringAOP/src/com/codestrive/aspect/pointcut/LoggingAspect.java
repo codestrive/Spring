@@ -42,4 +42,6 @@ public class LoggingAspect {
 		System.out.println("joinPointEx : joinPoint "+ joinPoint.toString());
 		System.out.println("joinPointEx : joinPoint "+ joinPoint.getTarget());
 	}
+	
+	
 }

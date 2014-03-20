@@ -29,6 +29,15 @@ public class LoggingAspect {
 		System.out.println("Second : Before Advice get called");
 	}
 	
-	@Pointcut("execution(public * get*())")
-	public void allGetters(){}
+	@Before("args(String)")
+	public void argumensts(){
+		System.out.println("arguments with string parameter");
+	}
+	
+	@Before("args(account)")
+	public void argumensts(String account){
+		System.out.println("arguments with string parameter and para value : "+account);
+	}
+	
+	
 }

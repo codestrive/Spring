@@ -25,6 +25,11 @@ public class LoggingAspect {
 		System.out.println("AfterReturning Advice Run. Get Method called ");
 	}
 	
+	/*@AfterReturning(pointcut="args(string)", returning="returning")
+	public void loggingReturnAdvicePara(String arg, String returning){
+		System.out.println("AfterReturning Advice Run."+arg+" Get Method called "+returning);
+	}*/
+	
 	@AfterThrowing("execution(public String getAccountHolderName())")
 	public void loggingClassAdvice(){
 		System.out.println("AfterThrowing Advice Run. Get Method called ");

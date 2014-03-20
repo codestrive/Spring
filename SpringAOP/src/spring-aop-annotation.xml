@@ -16,7 +16,7 @@
 	<!-- <bean name="loggingAspect" class="com.codestrive.aspect.before.LoggingAspect"></bean> -->
 	<!--  <bean name="loggingAspect" class="com.codestrive.aspect.around.LoggingAspect"></bean> -->
 	<!-- <bean name="loggingAspect" class="com.codestrive.aspect.pointcut.LoggingAspect"></bean> -->
-	<bean name="loggingAspect" class="com.codestrive.aspect.pointcut.LoggingAspect"></bean> 
+	<bean name="loggingAspect" class="com.codestrive.aspect.around.LoggingAspect"></bean> 
 	
 	<bean id="savingAccount" class="com.codestrive.appLogic.SavingAccount" lazy-init="true">
 		<constructor-arg value="4%"></constructor-arg>
