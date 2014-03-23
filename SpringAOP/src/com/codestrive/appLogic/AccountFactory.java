@@ -17,12 +17,11 @@ public class AccountFactory {
 		 */
 		System.out.println("Account Factory Called");
 		Account userAccount = null;
-		ApplicationContext factory = new ClassPathXmlApplicationContext("spring-aop-annotation.xml");
+		ApplicationContext factory = new ClassPathXmlApplicationContext("spring-aop-schema.xml");
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("springBean.xml"));
 		
 		if("S".equals(accountType)){
 			userAccount = (Account) factory.getBean("savingAccount");
-			
 		}
 		if("F".equals(accountType))
 			userAccount = (Account) factory.getBean("fixedAccount");
@@ -30,7 +29,7 @@ public class AccountFactory {
 			userAccount = (Account) factory.getBean("ppfAccount");
 		
 		String interestrate  = userAccount.getInterestRate();
-		//userAccount.setAccountNumber("001");
+		userAccount.setAccountNumber("001");
 		//userAccount.getAccountNumber();
 	//	userAccount.setBalanceAmount(999);
 	//	userAccount.getBalanceAmount();

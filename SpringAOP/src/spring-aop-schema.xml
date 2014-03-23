@@ -13,10 +13,6 @@
 <aop:aspectj-autoproxy />
 
 <!-- bean definitions here -->
-	<!-- <bean name="loggingAspect" class="com.codestrive.aspect.before.LoggingAspect"></bean> -->
-	 <bean name="loggingAspect" class="com.codestrive.aspect.pointcut.LoggingAspect"></bean>
-	<!-- <bean name="loggingAspect" class="com.codestrive.aspect.before.LoggingAspect"></bean>
-	<bean name="loggingAspect" class="com.codestrive.aspect.before.LoggingAspect"></bean> -->
 	
 	<bean id="savingAccount" class="com.codestrive.appLogic.SavingAccount" lazy-init="true">
 		<constructor-arg value="4%"></constructor-arg>
@@ -27,6 +23,14 @@
 	<bean id="ppfAccount" class="com.codestrive.appLogic.PPFAccount" lazy-init="true">
 		<constructor-arg value="7.5%"></constructor-arg>
 	</bean>
-
+	
+	<bean name="loggingAspect" class="com.codestrive.aspect.xmlConfig.LoggingAspect"></bean>
+	
+	<aop:config>
+		<aop:aspect id="loggingAspect" ref="loggingAspect">
+			<aop:before method="firstAdvice" pointcut="execution(public * get*())"/>
+			<!-- <aop:before method="arguments" pointcut="args(account)"/> -->
+		</aop:aspect>
+	</aop:config>
 
 </beans>

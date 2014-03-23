@@ -1,24 +1,25 @@
 package com.codestrive.aspect.xmlConfig;
 
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-
-@Aspect
 public class LoggingAspect {
 	
-	/* @Before("execution(public String com.codestrive.appLogic.SavingAccount.getInterestRate())")
-	 * @Before("execution(public String *.getInterestRate())")
-	 * @Before("execution(public String *.get*())")
-	 * @Before("execution(public String *.get*(..))")
-	 * @Before("execution(public String *.get*(*))")
-	 * @Before("execution(public * *.get*())")
-	 * @Before("execution(* * *.get*())")
-	 * @Before("args(someString)") // string integer or any type
-	*/
-	
-	@Before("execution(public String com.codestrive.appLogic.SavingAccount.getInterestRate())")
-	public void loggingAdvice(){
-		System.out.println("Before Advice Run. Get Method called ");
+	public void firstAdvice(){
+		System.out.println("First : Before Advice get called");
 	}
+	
+	
+	public void secondAdvice(){
+		System.out.println("Second : Before Advice get called");
+	}
+	
+	
+	public void argumensts(){
+		System.out.println("arguments with string parameter");
+	}
+	
+	
+	public void arguments(String account){
+		System.out.println("arguments with string parameter and para value : "+account);
+	}
+	
 	
 }
