@@ -8,7 +8,12 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.codestrive.model.State;
@@ -18,6 +23,9 @@ public class JdbcDAOImpl {
 
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate; 
+	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+	private SimpleJdbcTemplate simpleJdbcTemplate;
+	
 	
 	public DataSource getDataSource() {
 		return dataSource;
@@ -25,6 +33,8 @@ public class JdbcDAOImpl {
 	@Autowired
 	public void setDataSource(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
+		this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+		this.simpleJdbcTemplate = new SimpleJdbcTemplate(dataSource);
 	}
 
 	public JdbcTemplate getJdbcTemplate() {
@@ -34,37 +44,8 @@ public class JdbcDAOImpl {
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
-	/*public State getState(int stateId){
-		
-		 State state = null;
-		 
-         Connection conn = null;
-         try {        
-        	 	
-                conn =  dataSource.getConnection();
-                PreparedStatement ps = conn.prepareStatement("select * from state where state_id=?");
-                ps.setInt(1, stateId);
-                
-                ResultSet rs = ps.executeQuery();
-                if(rs.next()){
-                      state = new State(stateId, rs.getString("state_name"));
-                }
-                rs.close();
-                ps.close();
-             }
-         catch(Exception e){
-                e.printStackTrace();
-         }
-         finally {
-        	 try {
-				conn.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-         }
-         
-         return state;
-	}*/
+	
+	
 	
 	public int getStateCount(){
 		String sql = "SELECT COUNT(*) FROM STATE";
@@ -88,12 +69,23 @@ public class JdbcDAOImpl {
 	}
 
 	
-	public void insertState(State state){
+	/*public void insertState(State state){
 		String sql ="Insert into state(state_id,state_name) values(?,?)";
-		jdbcTemplate.update(sql, new Object[] {state.getStateId(),state.getStateName()});
+		System.out.println("insert val:"+jdbcTemplate.update(sql, new Object[] {state.getStateId(),state.getStateName()}));
+	}*/
+	
+	public void insertState(State state){
+		String sql ="Insert into state(state_id,state_name) values(:id, :name)";
+		SqlParameterSource namedPara = new MapSqlParameterSource("id", state.getStateId())
+											.addValue("name", state.getStateName());
+		namedParameterJdbcTemplate.update(sql, namedPara);
 	}
 	
 	
+	public void deleteState(int stateId){
+		String sql="delete from state where state_id =?";
+		jdbcTemplate.update(sql, new Object[] {stateId});
+	}
 	
 	private static final class StateMapper implements RowMapper<State>{
 
