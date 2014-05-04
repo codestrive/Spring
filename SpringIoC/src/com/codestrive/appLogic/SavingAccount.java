@@ -1,5 +1,8 @@
 package com.codestrive.appLogic;
 
+import org.springframework.stereotype.Component;
+
+
 public class SavingAccount implements Account {
 	/*
 	 * Saving account

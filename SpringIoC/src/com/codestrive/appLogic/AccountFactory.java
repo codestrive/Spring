@@ -21,7 +21,7 @@ public class AccountFactory {
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("springBean.xml"));
 		
 		if("S".equals(accountType))
-			userAccount = (Account) factory.getBean("savingAccount");
+			userAccount = factory.getBean("savingAccount",Account.class);
 		if("F".equals(accountType))
 			userAccount = (Account) factory.getBean("fixedAccount");
 		if("P".equals(accountType))
