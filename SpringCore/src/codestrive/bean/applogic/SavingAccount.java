@@ -1,6 +1,5 @@
 package codestrive.bean.applogic;
 
-import org.springframework.stereotype.Component;
 
 
 public class SavingAccount implements Account {

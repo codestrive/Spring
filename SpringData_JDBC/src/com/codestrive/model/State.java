@@ -9,9 +9,7 @@ public class State {
 		setStateId(stateId);
 		setStateName(stateName);
 	}
-	
-	public State(){
-		
+	public State(){	
 	}
 	
 	public int getStateId() {
@@ -26,7 +24,5 @@ public class State {
 	public void setStateName(String stateName) {
 		this.stateName = stateName;
 	}
-	
-	
 
 }

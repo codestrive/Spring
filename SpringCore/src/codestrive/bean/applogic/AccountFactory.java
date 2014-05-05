@@ -17,7 +17,7 @@ public class AccountFactory {
 		 */
 		System.out.println("Account Factory Called");
 		Account userAccount = null;
-		ApplicationContext factory = new ClassPathXmlApplicationContext("springContextContructorBased.xml");
+		ApplicationContext factory = new ClassPathXmlApplicationContext("spring-core-schema.xml");
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("springBean.xml"));
 		
 		if("S".equals(accountType))
