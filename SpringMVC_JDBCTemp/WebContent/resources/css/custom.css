@@ -1,0 +1,3 @@
+@import url("../bootstrap/css/bootstrap.min.css");
+
+.form-group label { margin-bottom:10px !important; }
