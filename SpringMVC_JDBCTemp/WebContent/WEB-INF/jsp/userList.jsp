@@ -34,8 +34,6 @@ td {
 		<br /> <br /> <br /> <b>Spring MVC - JDBC Template </b><br />
 		User List
 		 <br />
-			
-		
 
 		<table border="1">
 			<tr>

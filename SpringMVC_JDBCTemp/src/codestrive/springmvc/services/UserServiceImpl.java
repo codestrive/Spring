@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import codestrive.springmvc.dao.UserDao;
 import codestrive.springmvc.domain.User;
 
-
-
 public class UserServiceImpl implements UserService {
 
 	@Autowired
@@ -41,6 +39,4 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
-
-	
 }

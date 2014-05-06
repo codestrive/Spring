@@ -25,8 +25,8 @@ public class HomePageController {
 	public ModelAndView registerUser(@ModelAttribute User user) {
 
 		List<String> genderList = new ArrayList<String>();
-		genderList.add("male");
-		genderList.add("female");
+		genderList.add("Male");
+		genderList.add("Female");
 
 		List<String> cityList = new ArrayList<String>();
 		cityList.add("Dhanbad");
