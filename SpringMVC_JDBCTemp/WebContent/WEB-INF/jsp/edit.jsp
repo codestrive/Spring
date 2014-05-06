@@ -9,6 +9,7 @@ body {
 	font-size: 20px;
 	color: teal;
 	font-family: Calibri;
+	background-color: #f7f7f7;
 }
 
 td {
@@ -18,7 +19,10 @@ td {
 	height: 22px;
 	text-align: center;
 }
-
+a, a input{
+	text-decoration: none;
+	cursor: pointer;
+}
 .heading {
 	font-size: 18px;
 	color: white;
@@ -89,7 +93,8 @@ td {
 				<form:hidden path="userId" value="${map.user.userId}" />
 
 			</form:form>
-		</div>
+		</div><p>&copy;codestrive</p>
 	</center>
+	
 </body>
 </html>

@@ -8,6 +8,7 @@ body {
 	font-size: 20px;
 	color: teal;
 	font-family: Calibri;
+	background-color: #f7f7f7;
 }
 
 td {
@@ -16,6 +17,10 @@ td {
 	width: 100px;
 	height: 22px;
 	text-align: left;
+}
+a, a input{
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .heading {
@@ -60,11 +65,12 @@ td {
 					</tr>
 					<tr>
 						
-						<td colspan="2"><a href="getList">Click Here to See User List</a></td>
+						<td colspan="2"><a href="getList"><input type="button" value="See User List"/></a></td>
 					</tr>
 				</table>
 			</form:form>
-		</div>
+		</div><p>&copy;codestrive</p>
 	</center>
+	
 </body>
 </html>

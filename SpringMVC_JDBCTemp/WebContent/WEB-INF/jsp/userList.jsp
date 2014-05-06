@@ -11,6 +11,7 @@ body {
 	font-size: 20px;
 	color: teal;
 	font-family: Calibri;
+	background-color: #f7f7f7;
 }
 
 td {
@@ -24,8 +25,12 @@ td {
 	font-size: 18px;
 	color: white;
 	font: bold;
-	background-color: orange;
+	background-color: #CCC;
 	border: thick;
+}
+a, a input{
+	text-decoration: none;
+	cursor: pointer;
 }
 </style>
 </head>
@@ -52,13 +57,13 @@ td {
 					<td>${user.lastName}</td>
 					<td>${user.gender}</td>
 					<td>${user.city}</td>
-					<td><a href="edit?id=${user.userId}">Edit</a></td>
-					<td><a href="delete?id=${user.userId}">Delete</a></td>
+					<td><a href="edit?id=${user.userId}"><input type="button" value="Edit"/></a></td>
+					<td><a href="delete?id=${user.userId}"><input type="button" value="Delete"/></a></td>
 				</tr>
 			</c:forEach>
-			<tr><td colspan="7"><a href="register">Add New User</a></td></tr>
+			<tr><td colspan="7"><a href="register"><input type="button" value="Add New User"/></a></td></tr>
 		</table>
-
+		<p>&copy;codestrive</p>
 	</center>
 </body>
 </html>
