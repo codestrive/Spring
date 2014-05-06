@@ -11,10 +11,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
+--
+-- Dumping data for table `user`
+--
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `gender`, `city`) VALUES
 (1, 'Koushik', 'Ghosh', 'male', 'Dhanbad'),
 (2, 'Indrajit', 'Das', 'male', 'Kolkata'),
 (3, 'Code', 'Strive', 'male', 'Bangalore'),
-(4, 'Ramesh', 'Bokka', 'male', 'AndraPradesh');
+(4, 'Avi', 'Das', 'male', 'AndraPradesh');
 
