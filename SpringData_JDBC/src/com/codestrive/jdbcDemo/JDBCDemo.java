@@ -20,7 +20,8 @@ public class JDBCDemo {
               try {        
             	  	Class.forName(driverClass);
                     conn =  DriverManager.getConnection(url, user, pwd);
-	                PreparedStatement ps = conn.prepareStatement("select * from state where state_id=?");
+	                PreparedStatement ps = conn.prepareStatement("" +
+	                		"select * from state where state_id=?");
 	                ps.setInt(1, stateId);
 	                ResultSet rs = ps.executeQuery();
 	                if(rs.next()){

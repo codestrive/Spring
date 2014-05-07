@@ -2,6 +2,10 @@
 -- Codestrive.com
 --
 
+create database demo;
+
+use demo;
+
 CREATE TABLE IF NOT EXISTS `state` (
   `state_id` int(11) NOT NULL AUTO_INCREMENT,
   `state_name` varchar(50) DEFAULT NULL,

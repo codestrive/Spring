@@ -14,7 +14,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void insertData(User user) {
+		//biz logic
 		userdao.insertData(user);
+		//biz logic
 	}
 
 	@Override

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<http auto-config="true">
+		<form-login login-page="/app/terminal/login"
+			default-target-url="/app/terminal/list" authentication-failure-url="/app/terminal/login?error=true" />
+
+		<intercept-url pattern="/app/terminal/list**" access="ROLE_ADMIN" />
+		<intercept-url pattern="/app/terminal/create**" access="ROLE_ADMIN" />
+		<intercept-url pattern="/app/terminal/show**" access="ROLE_ADMIN" />
+		<intercept-url pattern="/app/terminal/delete**" access="ROLE_ADMIN" />
+		<logout logout-success-url="/app/terminal/login" />
+		<remember-me />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="jpaDataSource"
+				users-by-username-query="SELECT username, password, enabled FROM
+				users WHERE username = ?"
+				authorities-by-username-query="SELECT
+				username, authority FROM authorities WHERE username = ?" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

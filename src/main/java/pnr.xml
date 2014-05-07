@@ -1,0 +1,53 @@
+<AirKiosk>
+	<PNR PNR_reference="ZSSQOD" >
+		<NAME Pax_name="TEST2/IKIOSKMR/ADT" PTC="ADT" >
+			<FLIGHT Airline="AJ" Flight_number="121" Segment="LOSABV" Date="4SEP2012" STD="06:45" STA="08:00" Class="V" Reservations_status="HK" Seats="1" />
+			<FLIGHT Airline="AJ" Flight_number="121" Segment="LOSABV" Date="4SEP2012" STD="06:45" STA="08:00" Class="V" Reservations_status="HK" Seats="1" />
+			<TICKET Ticket_number="9140006196229" Agent_issued="BOSRCAJ.4104.7201078856624851.12080412024515403" Date_issued="120804120227" />
+			<PAY FOP="CCTYPE=INVOICE" CC_type="INVOICE" Auth_code="INVOICE" Currency="NGN" Amount="32759.3" AGT_REF="" CC_fee="410.29" SERVICEFEE="789.01" Agent_paid="BOSRCAJ.4104.7201078856624851.12080412024515403" />
+			<FARE Flight="AJ121" Segment="LOSABV" Date="04SEP2012" Class="V" Net_fare="2909" Currency="NGN" Sub_charges="12871" >
+				<CHARGES Amount="145.45" Charges_code="SA" />
+				<CHARGES Amount="145.45" Charges_code="AP" />
+				<CHARGES Amount="2500" Charges_code="PSC" />
+				<CHARGES Amount="1450.10" Charges_code="AK" />
+				<CHARGES Amount="1850" Charges_code="CU" />
+				<CHARGES Amount="0" Charges_code="OL" />
+				<CHARGES Amount="6580" Charges_code="YQ" />
+				<CHARGES Amount="100" Charges_code="NA" />
+				<CHARGES Amount="100" Charges_code="GU" />
+			</FARE>
+		</NAME>
+		<NAME Pax_name="TEST2/IKIOSK2MAST/CHD" PTC="CHD" >
+			<FLIGHT Airline="AJ" Flight_number="121" Segment="LOSABV" Date="4SEP2012" STD="06:45" STA="08:00" Class="V" Reservations_status="HK" Seats="1" />
+			<TICKET Ticket_number="9140006196230" Agent_issued="BOSRCAJ.4104.7201078856624851.12080412024515403" Date_issued="120804120227" />
+			<PAY FOP="CCTYPE=INVOICE" CC_type="INVOICE" Auth_code="INVOICE" Currency="NGN" Amount="32759.3" AGT_REF="" CC_fee="410.29" SERVICEFEE="789.01" Agent_paid="BOSRCAJ.4104.7201078856624851.12080412024515403" />
+			<FARE Flight="AJ121" Segment="LOSABV" Date="04SEP2012" Class="V" Net_fare="2909" Currency="NGN" Sub_charges="12871" >
+				<CHARGES Amount="145.45" Charges_code="SA" />
+				<CHARGES Amount="145.45" Charges_code="AP" />
+				<CHARGES Amount="2500" Charges_code="PSC" />
+				<CHARGES Amount="1450.10" Charges_code="AK" />
+				<CHARGES Amount="1850" Charges_code="CU" />
+				<CHARGES Amount="0" Charges_code="OL" />
+				<CHARGES Amount="6580" Charges_code="YQ" />
+				<CHARGES Amount="100" Charges_code="NA" />
+				<CHARGES Amount="100" Charges_code="GU" />
+			</FARE>
+		</NAME>
+		<NAME Pax_name="I/TEST2/IKIOSK3MAST/INF" PTC="INF" >
+			<FLIGHT Airline="AJ" Flight_number="121" Segment="LOSABV" Date="4SEP2012" STD="06:45" STA="08:00" Class="V" Reservations_status="HK" Seats="0" />
+			<TICKET Ticket_number="9140006196231" Agent_issued="BOSRCAJ.4104.7201078856624851.12080412024515403" Date_issued="120804120227" />
+			<PAY FOP="CCTYPE=INVOICE" CC_type="INVOICE" Auth_code="INVOICE" Currency="NGN" Amount="32759.3" AGT_REF="" CC_fee="410.29" SERVICEFEE="789.01" Agent_paid="BOSRCAJ.4104.7201078856624851.12080412024515403" />
+			<FARE Flight="AJ121" Segment="LOSABV" Date="04SEP2012" Class="V" Net_fare="0" Currency="NGN" >
+				<CHARGES Amount="0" Charges_code="SA" />
+			</FARE>
+		</NAME>
+		<CONTACT CTC_details="P2::EMAIL::SELVA@TENXPERTS.COM" />
+		<CONTACT CTC_details="P3::EMAIL::SELVA@TENXPERTS.COM" />
+		<CONTACT CTC_details="P1::PHONE::988602147" />
+		<CONTACT CTC_details="P2::PHONE::988602147" />
+		<CONTACT CTC_details="P3::PHONE::988602147" />
+		<CONTACT CTC_details="P1::EMAIL::SELVA@TENXPERTS.COM" />
+		<MODIFICATION Agent="BOSRCAJ.4104.7201078856624851.12080411575111363" />
+		<EQUIPMENT Equipment="EQUIPMENT::B734::AJ121/4SEP2012LOSABV/OPEN" />
+	</PNR>
+</AirKiosk>
