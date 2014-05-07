@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ns2:airlines-list-request xmlns:ns2="http://www.ikiosksng.com/air-kiosk/hub">
-	<ns2:airline code="JW">
-		<ns2:name>Jet Airways</ns2:name>
-	</ns2:airline>
-	<ns2:airline code="KF">
-		<ns2:name>King fisher</ns2:name>
-	</ns2:airline>
-</ns2:airlines-list-request>
